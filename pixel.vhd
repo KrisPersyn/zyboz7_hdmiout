@@ -107,7 +107,7 @@ if  (CLK'event and CLK = '1') then
                 h_sync <='1';
             end if ;          
             
-             if counth >= h_inscreen then
+             if counth >= h_inscreen  and counth < h_outscreen then
                 h_de <='1';
             end if ;
                         
@@ -167,7 +167,7 @@ if  (CLK'event and CLK = '1') then
                 v_sync <='1';
             end if ;          
             
-             if countv >= v_inscreen then
+             if countv >= v_inscreen and countv < v_outscreen then
                 v_de <='1';
             end if ;
                         
@@ -199,7 +199,7 @@ rgb_out <= rgb_in;
 
 end if;
 
-frame_done <= h_done and v_done;
+frame_done <= v_done;
 
 end process;
 
