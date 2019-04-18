@@ -103,7 +103,7 @@ if  (CLK'event and CLK = '1') then
                 h_done <='1';
             end if;
             
-            if counth >h_snc then
+            if counth >=h_snc then
                 h_sync <='1';
             end if ;          
             
@@ -163,7 +163,7 @@ if  (CLK'event and CLK = '1') then
                 
             end if;
             
-            if countv >v_snc then
+            if countv >=v_snc then
                 v_sync <='1';
             end if ;          
             
