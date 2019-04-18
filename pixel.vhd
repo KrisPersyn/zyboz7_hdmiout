@@ -186,6 +186,7 @@ end if;
 end process;
 
 video_en <= v_de and h_de;
+frame_done <= v_done;
 
 rgb_control : process (v_de,h_de)
 
@@ -198,8 +199,6 @@ if (v_de and h_de) = '1' then
 rgb_out <= rgb_in;
 
 end if;
-
-frame_done <= v_done;
 
 end process;
 
