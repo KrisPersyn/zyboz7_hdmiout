@@ -129,7 +129,7 @@ Vertical_sync: process(CLK)
 --
 variable countv : integer range 0 to 2047 := 0;
 variable v_display : integer range 0 to 2047 := 1080;
-variable v_total : integer range 0 to 4095 := 2200 ;
+variable v_total : integer range 0 to 4095 := 1125 ;
 variable v_snc : integer range 0 to 7 := 5;
 variable v_fp : integer range 0 to 7 := 4;
 variable v_bp : integer range 0 to 63 := 36;
@@ -139,7 +139,7 @@ variable v_outscreen : integer range 0 to 2047 := v_bp + v_snc + v_display;
 begin
 -- synchronous clock EN and reset if needed 
 if  (CLK'event and CLK = '1') then
-    if(RESET = '0') then
+    if(RESET = '1') then
         countv :=0;
         v_sync <='0';
         v_de <='0';
