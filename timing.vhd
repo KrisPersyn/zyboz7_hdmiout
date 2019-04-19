@@ -72,7 +72,7 @@ begin
  
 Horizontal_sync: process(CLK)
 --
-variable counth : integer range 0 to 2047 :=0;
+variable counth : integer range 0 to 4095 :=0;
 variable h_display : integer range 0 to 2047 := 1920;
 variable h_total : integer range 0 to 4095 := 2200;
 variable h_snc : integer range 0 to 127 := 44;
@@ -130,7 +130,7 @@ Vertical_sync: process(CLK)
 --
 variable countv : integer range 0 to 2047 := 0;
 variable v_display : integer range 0 to 2047 := 1080;
-variable v_total : integer range 0 to 4095 := 1125 ;
+variable v_total : integer range 0 to 2047 := 1125 ;
 variable v_snc : integer range 0 to 7 := 5;
 variable v_fp : integer range 0 to 7 := 4;
 variable v_bp : integer range 0 to 63 := 36;
@@ -203,7 +203,6 @@ rgb_out <= rgb_in;
 end if;
 
 end process;
-
 
 
 end Behavioral;
