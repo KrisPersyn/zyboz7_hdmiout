@@ -47,6 +47,7 @@ Generic (
            v_sync : out STD_LOGIC;
            
            frame_done : out STD_LOGIC;
+           frame_calc: out STD_LOGIC;
            
            rgb_in : in STD_LOGIC_VECTOR (23 downto 0);
            rgb_out : out STD_LOGIC_VECTOR (23 downto 0);
@@ -187,6 +188,7 @@ end process;
 
 video_en <= v_de and h_de;
 frame_done <= v_done;
+frame_calc <= not v_de;
 
 rgb_control : process (v_de,h_de)
 
