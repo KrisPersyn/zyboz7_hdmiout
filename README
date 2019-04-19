@@ -1,11 +1,13 @@
 If you're looking for a HDMI timing sequence (1080p) then this is the file you need.
 Timings are retrieved from this source: 
 https://timetoexplore.net/blog/video-timings-vga-720p-1080p
+
+Be sure to import sources from https://github.com/Digilent/vivado-library.
+
 Have fun.
 
+timing.vhd -> all timing calculations embedded in counter logic (NOT SURE IF WORKING)
 
-timing.vhd -> all timing calculations embedded in counter logic
-
-timing2.vhd -> seperation between counter logic and combinatorial logic
+timing2.vhd -> seperation between counter logic and combinatorial logic (WORKS!)
 
 (Testing on a zybo z7-20)
