@@ -10,4 +10,4 @@ timing.vhd -> all timing calculations embedded in counter logic (NOT SURE IF WOR
 
 timing2.vhd -> seperation between counter logic and combinatorial logic (WORKS!)
 
-(Testing on a zybo z7-20)
+(Tested on a zybo z7-20)
