@@ -2,4 +2,10 @@ If you're looking for a HDMI timing sequence (1080p) then this is the file you n
 Timings are retrieved from this source: 
 https://timetoexplore.net/blog/video-timings-vga-720p-1080p
 Have fun.
+
+
+timing.vhd -> all timing calculations embedded in counter logic
+
+timing2.vhd -> seperation between counter logic and combinatorial logic
+
 (Testing on a zybo z7-20)
